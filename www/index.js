@@ -8,21 +8,3 @@ window.addEventListener("mousemove", function (e) {
     y += e.movementY;
     //console.log(x, y);
 });
-
-window.addEventListener("click", function (e) {
-    x = e.clientX;
-    y = e.clientY;
-    //if (!this.document.pointerLockElement) {
-    //    this.document.body.requestPointerLock({
-    //        unadjustedMovement: true,
-    //    });
-    //}
-});
-
-// gameloop frame
-function renderframe() {
-    gs.frame();
-    requestAnimationFrame(renderframe);
-}
-// start loop
-requestAnimationFrame(renderframe);
